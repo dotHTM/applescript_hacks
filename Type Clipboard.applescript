@@ -9,7 +9,7 @@
 on run
 	-- ** If running this from AppleScript Editor, the following two lines should be uncommented to switch back to the app you want the typing to go into. The delay is to make sure the correct field has focus.
 	--	tell application "System Events" to keystroke tab using command down
-	--	delay 5
+	delay 5
 	
 	set theClipboard to «class ktxt» of ((the clipboard as text) as record)
 	keyStroker(theClipboard, 0.05)
