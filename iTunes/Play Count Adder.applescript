@@ -8,8 +8,7 @@ tell application "iTunes"
 	
 	repeat while numberToAdd is missing value
 		
-		display dialog mssgText default answer "0" buttons {"Add", "Cancel"} default button 1
-		copy the result as list to {text_returned, button_pressed}
+		set {text_returned, button_returned} to {text returned, button returned} of (display dialog mssgText default answer "0" buttons {"Add", "Cancel"} default button 1)
 		
 		try
 			
@@ -22,7 +21,7 @@ tell application "iTunes"
 		
 	end repeat
 	
-	if button_pressed is "Add" then
+	if button_returned is "Add" then
 		repeat with anTrack in theSel
 			
 			tell anTrack
