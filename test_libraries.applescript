@@ -8,12 +8,12 @@ use script "ProtoHashes"
 
 set someHash to {}
 
-set someHash to ph_append(someHash, "alice","1")
-set someHash to ph_append(someHash, "bob","2")
-set someHash to ph_append(someHash, "carl","3")
+tell script "ProtoHashes" to set someHash to append(someHash, "alice", "1")
+tell script "ProtoHashes" to set someHash to append(someHash, "bob", "2")
+tell script "ProtoHashes" to set someHash to append(someHash, "carl", "3")
 
-set someHash to ph_remove(someHash, "carl")
-set someHash to ph_modifyIndex(someHash, "bob", "15")
+tell script "ProtoHashes" to set someHash to remove(someHash, "carl")
+tell script "ProtoHashes" to set someHash to modifyIndex(someHash, "bob", "15")
 
 
-get {ph_dump(someHash),"\n",ph_index(someHash, "alice"),ph_index(someHash, "bob"),ph_index(someHash, "carl")}
+tell script "ProtoHashes" to get {dump(someHash), "\n", getIndex(someHash, "alice"), getIndex(someHash, "bob"), getIndex(someHash, "carl")}
