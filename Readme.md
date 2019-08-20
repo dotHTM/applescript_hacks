@@ -27,8 +27,3 @@ Rant over.
 ## File format
 
 I'd like to provide these as flat text files in the ".applescript" format, but laziness has left most in their default, compiled ".scpt" versions. If something gets corrupted, I'm sorry for your loss.
-
-
-
-
-test
